@@ -71,7 +71,7 @@ h2 {
   margin: 1.5rem auto ;
 }
 
-#phone-number-input {
+#user-input {
   display: block;
   margin: 0 auto;
   max-width: 90%;
@@ -110,7 +110,7 @@ h2 {
   border-left: 1px solid var(--gray-99);
 }
 
-#result {
+#results-div {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 3rem;
   text-align: center;
