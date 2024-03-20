@@ -16,8 +16,11 @@
       <div id="phone-screen">
         <div >
 
-          <p>Enter a Phone Number:</p>
-          <input type="text" id="phone-number-input"/>
+          <label for="phone-number-input">Enter a Phone Number:</label>
+          <input maxlength="20" type="text" id="phone-number-input"/>
+          <div id="result" class="hidden">
+            This is a US number!
+          </div>
         </div>
           <div id="btn-container">
             <button type="button" id="check-btn">Check</button>

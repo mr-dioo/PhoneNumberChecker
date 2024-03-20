@@ -12,6 +12,8 @@
   --phone-cover: black;
   --phone-color: #000;
   --phone-screen: #dfdfe2;
+  --submit-btn-color: rgb(0, 71, 27);
+  --cancel-btn-color: #e1e6ec;
 
 }
 
@@ -20,7 +22,7 @@ body {
 }
 
 main{ 
-  border: 2px solid salmon;
+  /* border: 2px solid salmon; */
   width: 40rem;
   height: 60rem;
   margin: 3rem auto 0;
@@ -63,9 +65,10 @@ h2 {
   font-size: 2.2rem;
 }
 
-#phone-screen p {
-  padding-top: 1rem;
+#phone-screen label {
   text-align: center;
+  display: block;
+  margin: 1.5rem auto ;
 }
 
 #phone-number-input {
@@ -78,15 +81,51 @@ h2 {
 }
 
 #btn-container {
-  border: 1px solid black;
+  border-top: 1px solid black;
   position: relative;
+  display: grid;
   grid-template-columns:  1fr 1fr ;
   grid-template-rows: auto;
   column-gap: 0;
+  row-gap: 0;
+  margin: 0;
+  padding: 0;
   
 }
 
 #btn-container > button {
-  /* display: block; */
-  width: 49%;
+  height:  5rem;
+}
+
+#check-btn {
+  background-color: var(--submit-btn-color);
+  border: 1px solid var(--submit-btn-color);
+  color: var(--gray-00);
+  border-collapse: collapse;
+}
+
+#clear-btn {
+  background-color: var(--cancel-btn-color);
+  border: 1px solid var(--cancel-btn-color);
+  border-left: 1px solid var(--gray-99);
+}
+
+#result {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  margin: 2rem;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.valid {
+  color: var(--submit-btn-color);
+}
+
+.invalid {
+  color: saddlebrown;
 }
