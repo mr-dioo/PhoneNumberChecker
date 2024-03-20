@@ -1,1 +1,92 @@
+* {
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serifs;
+}
 
+
+:root {
+  --gray-00: #fff;
+  --gray-99: #010101;
+  --background-color: #3b3b4f;
+  --phone-cover: black;
+  --phone-color: #000;
+  --phone-screen: #dfdfe2;
+
+}
+
+body { 
+  background-color: var(--background-color);
+}
+
+main{ 
+  border: 2px solid salmon;
+  width: 40rem;
+  height: 60rem;
+  margin: 3rem auto 0;
+}
+
+h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--gray-00);
+}
+
+#phone {
+  height: 45rem;
+  width: 28rem;
+  background-color: var(--phone-color);
+  margin: auto;
+  border-radius: 2rem;
+  padding: 1rem;
+}
+
+#camera {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 100%;
+  background-color: var(--phone-screen);
+  margin: 0rem auto  2rem;
+}
+
+#phone-screen {
+  margin: 0 auto;
+  width: 25rem;
+  height: 38rem;
+  background-color: var(--phone-screen);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#phone-screen * {
+  font-size: 2.2rem;
+}
+
+#phone-screen p {
+  padding-top: 1rem;
+  text-align: center;
+}
+
+#phone-number-input {
+  display: block;
+  margin: 0 auto;
+  max-width: 90%;
+  height: 5rem;
+  border: 2px solid var(--phone-color);
+  border-radius: .5rem;
+}
+
+#btn-container {
+  border: 1px solid black;
+  position: relative;
+  grid-template-columns:  1fr 1fr ;
+  grid-template-rows: auto;
+  column-gap: 0;
+  
+}
+
+#btn-container > button {
+  /* display: block; */
+  width: 49%;
+}
