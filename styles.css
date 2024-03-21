@@ -13,7 +13,9 @@
   --phone-color: #000;
   --phone-screen: #dfdfe2;
   --submit-btn-color: rgb(0, 71, 27);
-  --cancel-btn-color: #e1e6ec;
+  --submit-btn-acitve: rgba(0 ,71, 27 ,55%);
+  --cancel-btn-color: rgb(225, 230, 236);
+  --cancel-btn-active: rgba(225, 230, 236, 0.2);
 
 }
 
@@ -95,6 +97,7 @@ h2 {
 
 #btn-container > button {
   height:  5rem;
+  cursor: pointer;
 }
 
 #check-btn {
@@ -104,10 +107,18 @@ h2 {
   border-collapse: collapse;
 }
 
+#check-btn:active {
+  background-color: var(--submit-btn-acitve);
+}
+
 #clear-btn {
   background-color: var(--cancel-btn-color);
   border: 1px solid var(--cancel-btn-color);
   border-left: 1px solid var(--gray-99);
+}
+
+#clear-btn:active{
+  background-color: var(--cancel-btn-active);
 }
 
 #results-div {
