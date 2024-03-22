@@ -1,1 +1,50 @@
+* {
+  box-sizing: border-box;
+  font-size: 10px;
+}
 
+:root {
+  --gray-00: #ffffff;
+  --gray-50: #888;
+  --gray-99: #010101;
+  --dark-background: #0a0a23;
+  --light-phone-screen: #dfdfe2;
+  --result-color: #4d3800;
+  text-align: center;
+}
+
+body {
+  background-color: var(--dark-background);
+  color: var(--gray-00);
+}
+
+main {
+  width: 40rem;
+  height: 80rem;
+  margin: 10rem auto;
+  border: 1px solid wheat;
+}
+
+#phone {
+  width: 25rem;
+  height: 50rem;
+  background-color: var(--gray-99);  
+  border-radius: 2rem;
+  padding: 1rem;
+  margin: auto;
+}
+#front-camera {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  margin: auto;
+  background-color: var(--light-phone-screen);
+}
+
+#phone-screen {
+  width: 20rem;
+  height: 42rem;
+  background-color: var(--light-phone-screen);
+  margin: 2rem auto 0;
+  position: relative;
+}
