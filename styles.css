@@ -132,11 +132,3 @@ h2 {
 .hidden {
   display: none;
 }
-
-.valid {
-  color: var(--submit-btn-color);
-}
-
-.invalid {
-  color: saddlebrown;
-}
