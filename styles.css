@@ -1,50 +1,142 @@
 * {
   box-sizing: border-box;
   font-size: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serifs;
 }
+
 
 :root {
-  --gray-00: #ffffff;
-  --gray-50: #888;
+  --gray-00: #fff;
   --gray-99: #010101;
-  --dark-background: #0a0a23;
-  --light-phone-screen: #dfdfe2;
-  --result-color: #4d3800;
-  text-align: center;
+  --background-color: #3b3b4f;
+  --phone-cover: black;
+  --phone-color: #000;
+  --phone-screen: #dfdfe2;
+  --submit-btn-color: rgb(0, 71, 27);
+  --submit-btn-acitve: rgba(0 ,71, 27 ,55%);
+  --cancel-btn-color: rgb(225, 230, 236);
+  --cancel-btn-active: rgba(225, 230, 236, 0.2);
+
 }
 
-body {
-  background-color: var(--dark-background);
+body { 
+  background-color: var(--background-color);
+}
+
+main{ 
+  /* border: 2px solid salmon; */
+  width: 40rem;
+  height: 60rem;
+  margin: 3rem auto 0;
+}
+
+h2 {
+  text-align: center;
+  font-size: 3rem;
   color: var(--gray-00);
 }
 
-main {
-  width: 40rem;
-  height: 80rem;
-  margin: 10rem auto;
-  border: 1px solid wheat;
-}
-
 #phone {
-  width: 25rem;
-  height: 50rem;
-  background-color: var(--gray-99);  
+  height: 45rem;
+  width: 28rem;
+  background-color: var(--phone-color);
+  margin: auto;
   border-radius: 2rem;
   padding: 1rem;
-  margin: auto;
 }
-#front-camera {
-  width: 1rem;
+
+#camera {
   height: 1rem;
+  width: 1rem;
   border-radius: 100%;
-  margin: auto;
-  background-color: var(--light-phone-screen);
+  background-color: var(--phone-screen);
+  margin: 0rem auto  2rem;
 }
 
 #phone-screen {
-  width: 20rem;
-  height: 42rem;
-  background-color: var(--light-phone-screen);
-  margin: 2rem auto 0;
+  margin: 0 auto;
+  width: 25rem;
+  height: 38rem;
+  background-color: var(--phone-screen);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#phone-screen * {
+  font-size: 2.2rem;
+}
+
+#phone-screen label {
+  text-align: center;
+  display: block;
+  margin: 1.5rem auto ;
+}
+
+#user-input {
+  display: block;
+  margin: 0 auto;
+  max-width: 90%;
+  height: 5rem;
+  border: 2px solid var(--phone-color);
+  border-radius: .5rem;
+}
+
+#btn-container {
+  border-top: 1px solid black;
   position: relative;
+  display: grid;
+  grid-template-columns:  1fr 1fr ;
+  grid-template-rows: auto;
+  column-gap: 0;
+  row-gap: 0;
+  margin: 0;
+  padding: 0;
+  
+}
+
+#btn-container > button {
+  height:  5rem;
+  cursor: pointer;
+}
+
+#check-btn {
+  background-color: var(--submit-btn-color);
+  border: 1px solid var(--submit-btn-color);
+  color: var(--gray-00);
+  border-collapse: collapse;
+}
+
+#check-btn:active {
+  background-color: var(--submit-btn-acitve);
+}
+
+#clear-btn {
+  background-color: var(--cancel-btn-color);
+  border: 1px solid var(--cancel-btn-color);
+  border-left: 1px solid var(--gray-99);
+}
+
+#clear-btn:active{
+  background-color: var(--cancel-btn-active);
+}
+
+#results-div {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  margin: 2rem;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.valid {
+  color: var(--submit-btn-color);
+}
+
+.invalid {
+  color: saddlebrown;
 }
