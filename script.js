@@ -6,7 +6,6 @@ const resultsDiv = document.getElementById('results-div');
 
 
 const checkValidInput = () => {
-  reset();
   if (userInput.value === '') {
     alert("Please provide a phone number")
   }
@@ -30,6 +29,7 @@ const showResult = (bool, input) => {
 const reset = () => {
   userInput.value = '';
   resultsDiv.className = 'hidden';
+  resultsDiv.textContent = '';
 }
 
 
