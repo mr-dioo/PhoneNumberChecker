@@ -15,20 +15,20 @@ const checkValidInput = () => {
 }
 
 const checkValidUsNumber = (input) => {
-  const usNumRegex = /^1? ?((\(\d{3}\))|(\d{3}))[- ]?\d{3}[- ]?\d{4}/;
+  const usNumRegex = /^1? ?((\(\d{3}\))|(\d{3}))[- ]?\d{3}[- ]?\d{4}$/;
   showResult( usNumRegex.test(input) , input );
 }
 
 const showResult = (bool, input) => {
   resultsDiv.textContent = (bool ? 'Valid US number: ' : 'Invalid US number: ') + input;
   resultsDiv.classList.remove('hidden');
-  resultsDiv.classList.add(`${bool ? '' : 'in'}valid`);
+  resultsDiv.style.color = bool ? '#00471b' : 'saddlebrown' ;
 
 }
 
 const reset = () => {
   userInput.value = '';
-  resultsDiv.className = 'hidden';
+  resultsDiv.classList.add('hidden');
   resultsDiv.textContent = '';
 }
 
